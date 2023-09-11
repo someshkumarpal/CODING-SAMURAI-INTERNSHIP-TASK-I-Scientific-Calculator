@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+:root {
+  --base-font-size: 15px;
+  --font-size-multiplier: 0.390625;
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/**
+Screen Ratio
+*/
+$sm-screen: 480px;
+$md-screen: 720px;
+$lg-screen: 1080px;
+/**Screen Ratio End*/
+/* Color Palette */
+
+$color-0: #000;
+$color-1: #66f;
+$color-2: #3c4250;
+$color-3: #eceef3;
+$color-4: #fff;
+
+/*Color Palette End*/
+
+/*Defult Spacing*/
+$xs-space: 02px;
+$sm-space: 04px;
+$md-space: 08px;
+$lg-space: 12px;
+$xl-space: 16px;
+/*Defult Spacing End*/
+
+/*Shadow*/
+$shadow-1: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+$shadow-2: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+$shadow-3: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+  rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+$shadow-4: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+$shadow-5: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+/*Typography*/
+
+$body-font: "Ubuntu", sans-serif;
+
+h1 {
+  font-size: calc(28px + var(--font-size-multiplier) * 1vw);
+}
+
+h2 {
+  font-size: calc(26px + var(--font-size-multiplier) * 1vw);
+}
+
+h3 {
+  font-size: calc(24px + var(--font-size-multiplier) * 1vw);
+}
+
+h4 {
+  font-size: calc(22px + var(--font-size-multiplier) * 1vw);
+}
+
+h5 {
+  font-size: calc(20px + var(--font-size-multiplier) * 1vw);
+}
+
+h6 {
+  font-size: calc(18px + var(--font-size-multiplier) * 1vw);
+}
+/*Typography End*/
+
+/* Amazing flex utility classes */
+[class*="flex"] {
+  display: flex;
+  &[class*="-direction-row"] {
+    flex-direction: row;
+  }
+  &[class*="-direction-column"] {
+    flex-direction: column;
+  }
+  &[class*="-wrap"] {
+    flex-wrap: wrap;
+  }
+  &[class*="-nowrap"] {
+    flex-wrap: nowrap;
+  }
+  &[class*="-align-start"] {
+    align-items: flex-start;
+  }
+  &[class*="-align-center"] {
+    align-items: center;
+  }
+  &[class*="-align-end"] {
+    align-items: flex-end;
+  }
+  &[class*="-justify-center"] {
+    justify-content: center;
+  }
+  &[class*="-space-between"] {
+    justify-content: space-between;
+  }
+  &[class*="-space-around"] {
+    justify-content: space-around;
+  }
+  &[class*="-space-evenly"] {
+    justify-content: space-evenly;
+  }
+}
+/* Amazing flex utility classes End */
+
+/*Amazing Font Utility Classes*/
+[class*="font"] {
+  &[class*="-style-italic"] {
+    font-style: italic;
+  }
+  &[class*="-style-oblique"] {
+    font-style: oblique;
+  }
+  &[class*="-variant-small"] {
+    font-variant: small-caps;
+  }
+  &[class*="unicase"] {
+    font-variant-caps: unicase;
+  }
+  &[class*="titling"] {
+    font-variant-caps: titling-caps;
+  }
+  &[class*="petite-cpas"] {
+    font-variant-caps: petite-caps;
+  }
+  &[class*="all-petite-caps"] {
+    font-variant-caps: all-petite-caps;
+  }
+  &[class*="weight-bold"] {
+    font-weight: bold;
+  }
+  &[class*="weight-bolder"] {
+    font-weight: bolder;
+  }
+  &[class*="weight-lighter"] {
+    font-weight: lighter;
+  }
+  &[class*="weight-100"] {
+    font-weight: 100;
+  }
+  &[class*="weight-200"] {
+    font-weight: 200;
+  }
+  &[class*="weight-300"] {
+    font-weight: 300;
+  }
+  &[class*="weight-400"] {
+    font-weight: 400;
+  }
+  &[class*="weight-500"] {
+    font-weight: 500;
+  }
+  &[class*="weight-600"] {
+    font-weight: 600;
+  }
+  &[class*="weight-700"] {
+    font-weight: 700;
+  }
+  &[class*="weight-800"] {
+    font-weight: 800;
+  }
+  &[class*="weight-900"] {
+    font-weight: 900;
+  }
+}
+/*Amazing Font Utility Classes End*/
+
+html,
+body {
+  font-size: calc(var(--base-font-size) + var(--font-size-multiplier) * 1vw);
+  font-family: $body-font;
+}
+/**
+#e8f7fd
+*/
+body, #root {
+  background: #fffefa;
+  width: 100vw;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+}
