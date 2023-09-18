@@ -3,17 +3,43 @@
 .background {
     width: 100%;
     height: 100%;
-    // background:#000;
     padding: $sm-space;
     gap: $sm-space;
+    @media screen and (max-width: $sm-screen) {
+        flex-direction: column;
+    }
     .left,
     .right {
         width: 100%;
         height: 100%;
     }
     .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;       
+        margin: auto;
+        .center{            
+            display: flex;
+            flex-direction: column;
+            h1{
+                color: $color-1;
+                text-align: center;
+
+            }
+            span{
+                
+                
+                text-align: end;
+                font-size: calc(12px + var(--font-size-multiplier) * 1vw);
+                color : $color-2
+            }
+        }
+       
+        
         @media screen and (max-width: $sm-screen) {
-            display: none;
+            background-color: $color-4;
+        height: 30%;
         }
     }
     .right {
@@ -22,87 +48,31 @@
         flex-grow: 1;
         .calculator {
             height: 100%;
-            box-shadow: $shadow-2;
+            @media screen and (min-width: $sm-screen) {
+                box-shadow: $shadow-2;
+            }
+            
             padding: $md-space;
             background: #fff;
-
+            font-size: calc(26px + var(--font-size-multiplier) * 1vw);
             .input-box {
                 width: 100%;
-                padding: $sm-space;
+                padding: $md-space;
                 margin-bottom: $xl-space;
-                justify-content: space-between; /**This is for App*/
-                // height: calc(45% - #{$xl-space}); /**This is for Browser*/
-                height: calc(100% - #{$xl-space}); /**This is for Apps*/
-                .solution {
-                    // max-height: 150px;
-                    // height: 100%;
-                    // border: 1px solid red;
-                    overflow-x: hidden;
-                    overflow-y: scroll;
-
-                    .bot-response {
-                        font-size: calc(14px + var(--font-size-multiplier) * 1vw);
-                        line-height: 24px;
-                        border-radius: $xl-space;
-                        word-wrap: break-word;
-                        max-width: fit-content;
-                        padding: $md-space $xl-space;
-                        background: #eaeef3;
-                        color: rgb(0, 0, 0);
-                        margin-top: $sm-space;
-                    }
-
-                    .msgCaption {
-                        padding: 0 25px 10px !important;
-                        padding-top: 10px !important;
-                    }
-
-                    .user-response {
-                        background: rgb(0, 102, 255);
-                        color: rgb(255, 255, 255);
-                        font-size: 17px;
-                        line-height: 24px;
-                        border-radius: 20px;
-                        max-width: 250px;
-                        padding: 15px 17px;
-                        border-bottom-right-radius: 5px;
-                        word-break: break-all;
-                        white-space: normal;
-                    }
-
-                    .massage {
-                        padding: 0 25px 0px;
-                    }
-
-                    .massage img {
-                        width: 100%;
-                        height: 217px;
-                        background: #eaeef3;
-                        border-radius: 10px;
-                        margin-bottom: 6px;
-                    }
-
-                    .captionBot img {
-                        width: 18px;
-                        height: 18px;
-                        border-radius: 100%;
-                    }
-
-                    .captionBot {
-                        display: flex;
-                        justify-content: space-between;
-                        padding: 0 25px;
-                        width: 117px;
-                        font-size: 14px;
-                        color: rgb(24, 25, 25);
-                    }
-                }
+                justify-content: space-around; 
+                
+                height: calc(100% - #{$xl-space});
+                background-color: $color-3;
+                border-radius: $md-space;
+                box-shadow: $shadow-3;
+                word-wrap: break-word;
+                word-break: break-all;
                 .previous-operant {
                     width: 100%;
                     height: 100%;
                     
                     position: relative;                   
-                    font-size: calc(22px + var(--font-size-multiplier) * 1vw);
+                    font-size: calc(26px + var(--font-size-multiplier) * 1vw);
                     span {
                         position: absolute;
                         bottom: 0;
@@ -115,7 +85,7 @@
                     width: 100%;
                    
                     text-align: right;
-                    font-size: calc(28px + var(--font-size-multiplier) * 1vw);
+                    font-size: calc(32px + var(--font-size-multiplier) * 1vw);
                     word-wrap: break-word;
                     word-break: break-all;
                 }
