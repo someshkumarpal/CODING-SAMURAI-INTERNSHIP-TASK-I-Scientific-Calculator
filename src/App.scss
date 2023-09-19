@@ -5,7 +5,7 @@
     height: 100%;
     padding: $sm-space;
     gap: $sm-space;
-    @media screen and (max-width: $sm-screen) {
+    @media screen and (max-width: $md-screen) {
         flex-direction: column;
     }
     .left,
@@ -37,13 +37,13 @@
         }
        
         
-        @media screen and (max-width: $sm-screen) {
+        @media screen and (max-width: $md-screen) {
             background-color: $color-4;
         height: 30%;
         }
     }
     .right {
-        max-width: $sm-screen;
+        max-width: $md-screen;
 
         flex-grow: 1;
         .calculator {
